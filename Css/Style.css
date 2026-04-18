@@ -154,9 +154,9 @@ body {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 18px;
 }
 .spec-box { background: var(--cream); border-radius: 10px; padding: 12px 14px; }
-.spec-box-min { background: var(--brown); }
-.spec-box-min .spec-lbl { color: rgba(255,255,255,0.55); }
-.spec-box-min .spec-val { color: var(--amber); }
+.spec-box-min { background: var(--amber-light); border: 1.5px solid rgba(193,127,84,0.35); }
+.spec-box-min .spec-lbl { color: var(--amber); }
+.spec-box-min .spec-val { color: var(--brown); }
 .spec-lbl {
   font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase;
   color: var(--gray-light); margin-bottom: 2px;

@@ -6,8 +6,8 @@ const polaroids = [
     usage: 'O formato clássico e mais reconhecido. Perfeito para porta-retratos, presentes e coleções pessoais. Cabe em qualquer moldura padrão.',
     usageImgs: [
       { src: 'Img/6.png', label: 'Álbum de fotos' },
-      { src: 'Img/7.png', label: 'Presente' },
-      { src: 'Img/8.png', label: 'Mural de fotos' }
+      { src: 'Img/8.png', label: 'Mural de fotos' },
+      { src: 'Img/18.png', label: 'Porta-retrato' }
     ]
   },
   {
@@ -17,7 +17,7 @@ const polaroids = [
     usageImgs: [
       { src: 'Img/9.png', label: 'Capa de celular' },
       { src: 'Img/10.png', label: 'Presente' },
-      { src: 'Img/11.png', label: 'Coleção de fotos' }
+      { src: 'Img/7.png', label: 'Lembrança' }
     ]
   },
   {
@@ -26,8 +26,8 @@ const polaroids = [
     usage: 'Cabe em qualquer carteira ou porta-retrato pequeno. Ótimo para lembrancinhas de aniversário, festas e souvenirs.',
     usageImgs: [
       { src: 'Img/12.png', label: 'Agenda' },
-      { src: 'Img/13.png', label: 'Varal de fotos' },
-      { src: 'Img/14.png', label: 'Espelho do carro' }
+      { src: 'Img/11.png', label: 'Coleção de fotos' },
+      { src: 'Img/17.png', label: 'Carteira' }
     ]
   },
   {
@@ -35,9 +35,9 @@ const polaroids = [
     wMM: 40, hMM: 49, pWmm: 35, pHmm: 31, bLat: 2.5, bBot: 10, seed: 85, minQty: 20,
     usage: 'Perfeita para varais decorativos, scrapbooks, enfeites de mesa e composições de parede. Alta quantidade por folha reduz o custo.',
     usageImgs: [
-      { src: 'Img/15.png', label: 'Scrapbook' },
-      { src: 'Img/16.png', label: 'Marca-página' },
-      { src: 'Img/17.png', label: 'Carteira' }
+      { src: 'Img/13.png', label: 'Varal decorativo' },
+      { src: 'Img/14.png', label: 'Enfeite de carro' },
+      { src: 'Img/16.png', label: 'Marca-página' }
     ]
   },
   {
@@ -45,7 +45,7 @@ const polaroids = [
     wMM: 105, hMM: 128, pWmm: 94, pHmm: 86, bLat: 5.5, bBot: 28, seed: 110, minQty: 2,
     usage: 'O maior formato. Ideal para presentes premium, álbuns de viagem e decoração de ambientes. Impacto visual garantido.',
     usageImgs: [
-      { src: 'Img/18.png', label: 'Porta-retrato' },
+      { src: 'Img/15.png', label: 'Álbum de viagem' },
       { src: 'Img/19.png', label: 'Cartão-postal' },
       { src: 'Img/20.png', label: 'Presente' }
     ]
