@@ -61,7 +61,7 @@ priceExtras.innerHTML = `
       <div class="caption-card">
         <div class="caption-type">💛 Nomes</div>
         <div class="caption-examples">
-          <span>Ana & João</span>
+          <span>Maria & João</span>
           <span>Mari + Família</span>
           <span>Lú & Bê</span>
         </div>

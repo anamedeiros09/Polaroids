@@ -2,17 +2,17 @@
 const polaroids = [
   {
     id: 'oficial', emoji: '📷', name: 'Oficial', subtitle: 'Polaroid Original',
-    wMM: 88, hMM: 107, pWmm: 79, pHmm: 72, bLat: 4.5, bBot: 23, seed: 17,
+    wMM: 88, hMM: 107, pWmm: 79, pHmm: 72, bLat: 4.5, bBot: 23, seed: 17, minQty: 4,
     usage: 'O formato clássico e mais reconhecido. Perfeito para porta-retratos, presentes e coleções pessoais. Cabe em qualquer moldura padrão.',
     usageImgs: [
       { src: 'Img/6.png', label: 'Álbum de fotos' },
-      { src: 'Img/7.png', label: 'Presente personalizado' },
-      { src: 'Img/8.png', label: 'Quadro de fotos' }
+      { src: 'Img/7.png', label: 'Presente' },
+      { src: 'Img/8.png', label: 'Mural de fotos' }
     ]
   },
   {
     id: 'media', emoji: '📱', name: 'Média', subtitle: 'Para cases com bolso',
-    wMM: 65, hMM: 79, pWmm: 58, pHmm: 53, bLat: 3.5, bBot: 17, seed: 42,
+    wMM: 65, hMM: 79, pWmm: 58, pHmm: 53, bLat: 3.5, bBot: 17, seed: 42, minQty: 9,
     usage: 'Encaixa perfeitamente em capas de celular com bolso transparente. Presente moderno e personalizável — a sua foto sempre com você.',
     usageImgs: [
       { src: 'Img/9.png', label: 'Capa de celular' },
@@ -22,17 +22,17 @@ const polaroids = [
   },
   {
     id: 'pequena', emoji: '💳', name: 'Pequena', subtitle: 'Para levar sempre consigo',
-    wMM: 50, hMM: 61, pWmm: 44, pHmm: 40, bLat: 3, bBot: 13, seed: 63,
+    wMM: 50, hMM: 61, pWmm: 44, pHmm: 40, bLat: 3, bBot: 13, seed: 63, minQty: 12,
     usage: 'Cabe em qualquer carteira ou porta-retrato pequeno. Ótimo para lembrancinhas de aniversário, festas e souvenirs.',
     usageImgs: [
-      { src: 'Img/12.png', label: 'Planner ou Agenda' },
-      { src: 'Img/13.png', label: 'Mural de fotos' },
+      { src: 'Img/12.png', label: 'Agenda' },
+      { src: 'Img/13.png', label: 'Varal de fotos' },
       { src: 'Img/14.png', label: 'Espelho do carro' }
     ]
   },
   {
     id: 'mini', emoji: '🎨', name: 'Mini Decorativa', subtitle: 'Delicada e charmosa',
-    wMM: 40, hMM: 49, pWmm: 35, pHmm: 31, bLat: 2.5, bBot: 10, seed: 85,
+    wMM: 40, hMM: 49, pWmm: 35, pHmm: 31, bLat: 2.5, bBot: 10, seed: 85, minQty: 20,
     usage: 'Perfeita para varais decorativos, scrapbooks, enfeites de mesa e composições de parede. Alta quantidade por folha reduz o custo.',
     usageImgs: [
       { src: 'Img/15.png', label: 'Scrapbook' },
@@ -42,12 +42,12 @@ const polaroids = [
   },
   {
     id: 'postal', emoji: '📬', name: 'Postal', subtitle: 'Grande e impactante',
-    wMM: 105, hMM: 128, pWmm: 94, pHmm: 86, bLat: 5.5, bBot: 28, seed: 110,
+    wMM: 105, hMM: 128, pWmm: 94, pHmm: 86, bLat: 5.5, bBot: 28, seed: 110, minQty: 2,
     usage: 'O maior formato. Ideal para presentes premium, álbuns de viagem e decoração de ambientes. Impacto visual garantido.',
     usageImgs: [
-      { src: 'Img/18.png', label: 'Porta-retratos' },
+      { src: 'Img/18.png', label: 'Porta-retrato' },
       { src: 'Img/19.png', label: 'Cartão-postal' },
-      { src: 'Img/20.png', label: 'Cartão presente' }
+      { src: 'Img/20.png', label: 'Presente' }
     ]
   }
 ];
@@ -113,6 +113,10 @@ polaroids.forEach(p => {
         <div class="spec-box">
           <div class="spec-lbl">Área da foto</div>
           <div class="spec-val">${fmt(p.pWmm)} × ${fmt(p.pHmm)}</div>
+        </div>
+        <div class="spec-box spec-box-min">
+          <div class="spec-lbl">Pedido mínimo</div>
+          <div class="spec-val">${p.minQty} unidades</div>
         </div>
       </div>
       <div class="usage-imgs">
