@@ -199,13 +199,15 @@ body {
 .price-card.featured .pc-name { color: rgba(255,255,255,0.5); }
 .price-card.featured .pc-size { color: rgba(255,255,255,0.35); }
 .price-card.featured .pc-price { color: var(--amber); }
-.price-card.featured .pc-per  { color: rgba(255,255,255,0.4); }
+.price-card.featured .pc-per  { color: rgba(255,255,255,0.7); }
 .price-grid .price-card:nth-child(1) { background: #2C2118; }
 .price-grid .price-card:nth-child(1) .pc-price { color: var(--amber); }
 .price-grid .price-card:nth-child(2) { background: #7B4030; color: white; }
 .price-grid .price-card:nth-child(2) .pc-price { color: var(--amber-light); }
+.price-grid .price-card:nth-child(2) .pc-per  { color: rgba(255,255,255,0.75); }
 .price-grid .price-card:nth-child(3) { background: #C17F54; color: white; }
 .price-grid .price-card:nth-child(3) .pc-price { color: var(--white); }
+.price-grid .price-card:nth-child(3) .pc-per  { color: rgba(255,255,255,0.8); }
 .price-grid .price-card:nth-child(4) { background: #E5C9A8; }
 .price-grid .price-card:nth-child(4) .pc-price { color: var(--brown-mid); }
 .price-grid .price-card:nth-child(5) { background: #F5EDE2; }
@@ -215,6 +217,28 @@ body {
 .pc-size  { font-size: 11px; color: var(--gray-light); margin-bottom: 12px; }
 .pc-price { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 500; color: var(--brown); line-height: 1; }
 .pc-per   { font-size: 11px; color: var(--gray); margin-top: 3px; }
+
+.price-kit-note {
+  margin: 20px 0 32px;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 20px 24px;
+  border: 1px solid var(--amber-light);
+}
+.pkn-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.pkn-icon { font-size: 18px; line-height: 1.5; }
+.pkn-header strong { display: block; font-size: 13px; font-weight: 600; color: var(--brown); margin-bottom: 3px; }
+.pkn-header span { font-size: 12px; color: var(--gray); }
+.pkn-sizes { display: flex; flex-wrap: wrap; gap: 8px; }
+.pkn-size {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--cream); border-radius: 10px; padding: 10px 14px;
+  flex: 1; min-width: 110px; text-align: center; gap: 5px;
+}
+.pkn-name { font-size: 10px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--gray); }
+.pkn-range { font-size: 12px; color: var(--gray-light); }
+.pkn-range strong { color: var(--brown-mid); font-weight: 600; font-size: 13px; }
+.pkn-arrow { color: var(--amber); font-size: 11px; }
 
 /* ─── KITS ─────────────────────────────────────────────── */
 .kit-tier { margin-bottom: 52px; }

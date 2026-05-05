@@ -1,10 +1,15 @@
 // ─── KITS DATA ───────────────────────────────────────────────
 const kitSizes = [
-  { emoji:'📬', name:'Postal',          unitPrice:4.00, perSheet:2  },
-  { emoji:'📷', name:'Oficial',         unitPrice:3.50, perSheet:4  },
-  { emoji:'📱', name:'Média',           unitPrice:3.00, perSheet:9  },
-  { emoji:'💳', name:'Pequena',         unitPrice:2.50, perSheet:12 },
-  { emoji:'🎨', name:'Mini Decorativa', unitPrice:2.00, perSheet:20 },
+  { emoji:'📬', name:'Postal',          id:'postal',  perSheet:2,
+    prices:[7.00, 13.50, 19.50, 26.50, 33.00] },
+  { emoji:'📷', name:'Oficial',         id:'oficial', perSheet:4,
+    prices:[10.00, 19.50, 29.00, 39.00, 48.50] },
+  { emoji:'📱', name:'Média',           id:'media',   perSheet:9,
+    prices:[18.00, 35.50, 53.00, 71.00, 88.00] },
+  { emoji:'💳', name:'Pequena',         id:'pequena', perSheet:12,
+    prices:[23.00, 45.00, 67.00, 89.50, 112.00] },
+  { emoji:'🎨', name:'Mini Decorativa', id:'mini',    perSheet:20,
+    prices:[35.50, 70.00, 105.00, 140.00, 175.00] },
 ];
 
 const kitTiers = [
@@ -17,15 +22,19 @@ const kitTiers = [
 
 // ─── RENDER KITS ─────────────────────────────────────────────
 const kitsSection = document.getElementById('kits-section');
+kitsSection.innerHTML = `
+  <p style="font-size:14px; color:#2e7d32; margin:-14px 0 38px 0;
+            letter-spacing:0.02em; text-align:left;">
+    🔑 5% off no Pix
+  </p>`;
 kitTiers.forEach((tier, i) => {
   const pct = Math.round(tier.disc * 100);
   const discLabel = pct === 0 ? 'sem desconto' : pct + '% de desconto';
   const isZero = pct === 0;
   const rowCards = kitSizes.map(sz => {
     const qty = sz.perSheet * tier.sheets;
-    const raw = sz.unitPrice * qty * (1 - tier.disc);
-    const rounded = Math.round(raw);
-    const totalFmt = 'R$' + rounded + ',00';
+    const finalPrice = sz.prices[i];
+    const totalFmt = 'R$' + finalPrice.toFixed(2).replace('.', ',');
     return `<div class="kit-card">
       <div class="kit-card-emoji">${sz.emoji}</div>
       <div class="kit-card-name">${sz.name}</div>

@@ -1,13 +1,18 @@
 // ─── RENDER PREÇOS ───────────────────────────────────────────
 const prices = [
-  { emoji:'📬', name:'Postal',          size:'10,5 × 12,8 cm', price:'R$4,00', featured:true  },
-  { emoji:'📷', name:'Oficial',         size:'8,8 × 10,7 cm',  price:'R$3,50', featured:false },
-  { emoji:'📱', name:'Média',           size:'6,5 × 7,9 cm',   price:'R$3,00', featured:false },
-  { emoji:'💳', name:'Pequena',         size:'5,0 × 6,1 cm',   price:'R$2,50', featured:false },
-  { emoji:'🎨', name:'Mini Decorativa', size:'4,0 × 4,9 cm',   price:'R$2,00', featured:false },
+  { emoji:'📬', name:'Postal',          size:'10,5 × 12,8 cm', price:'R$5,50', fullUnit:'R$3,30', featured:true  },
+  { emoji:'📷', name:'Oficial',         size:'8,8 × 10,7 cm',  price:'R$3,50', fullUnit:'R$2,43', featured:false },
+  { emoji:'📱', name:'Média',           size:'6,5 × 7,9 cm',   price:'R$2,50', fullUnit:'R$1,96', featured:false },
+  { emoji:'💳', name:'Pequena',         size:'5,0 × 6,1 cm',   price:'R$2,25', fullUnit:'R$1,87', featured:false },
+  { emoji:'🎨', name:'Mini Decorativa', size:'4,0 × 4,9 cm',   price:'R$1,95', fullUnit:'R$1,75', featured:false },
 ];
 
 const priceGrid = document.getElementById('price-grid');
+priceGrid.insertAdjacentHTML('beforebegin', `
+  <p style="font-size:14px; color:#2e7d32; margin:-14px 0 38px 0;
+            letter-spacing:0.02em; text-align:left;">
+    🔑 5% off no Pix
+  </p>`);
 prices.forEach(p => {
   priceGrid.innerHTML += `
     <div class="price-card${p.featured ? ' featured' : ''}">
@@ -15,9 +20,28 @@ prices.forEach(p => {
       <div class="pc-name">${p.name}</div>
       <div class="pc-size">${p.size}</div>
       <div class="pc-price">${p.price}</div>
-      <div class="pc-per">por unidade</div>
+      <div class="pc-per">por foto · pedido mínimo</div>
     </div>`;
 });
+
+priceGrid.insertAdjacentHTML('afterend', `
+  <div class="price-kit-note">
+    <div class="pkn-header">
+      <span class="pkn-icon">📉</span>
+      <div>
+        <strong>Descontos progressivos em kits</strong>
+        <span>Quanto mais unidades, menor o preço por foto — de Kit Mini (1 folha) até Kit Full (5 folhas)</span>
+      </div>
+    </div>
+    <div class="pkn-sizes">
+      ${prices.map(p => `
+        <div class="pkn-size">
+          <span class="pkn-name">${p.emoji} ${p.name}</span>
+          <span class="pkn-range">${p.price} <span class="pkn-arrow">→</span> <strong>${p.fullUnit}</strong>/foto</span>
+        </div>`).join('')}
+    </div>
+  </div>
+`);
 
 // ─── OPCIONAIS ───────────────────────────────────────────────
 const priceExtras = document.getElementById('price-extras');
@@ -88,7 +112,16 @@ priceExtras.innerHTML = `
   <!-- Pagamento -->
   <div class="extras-block">
     <div class="extras-eyebrow">Pagamento</div>
-    <h3 class="extras-title">Pagamento via Pix 🔑</h3>
-    <p class="extras-desc">Rápido, seguro e sem taxas. Após confirmar o pedido pelo WhatsApp, você recebe a chave Pix — o comprovante libera a produção na hora.</p>
+    <h3 class="extras-title">Formas de pagamento</h3>
+    <p class="extras-desc">
+      Aceitamos Pix 🔑, débito e crédito à vista 💳 — e também
+      parcelamento em 2×. Pagando no Pix, você tem
+      <strong>5% de desconto</strong> automático, é só avisar na hora
+      de fechar o pedido. Prefere parcelar? O crédito em
+      <strong>2× está disponível a partir de R$100</strong>, com um
+      pequeno acréscimo sobre o total que te informamos na hora. Após
+      confirmar o pedido pelo WhatsApp, você recebe as instruções de
+      pagamento — o comprovante libera a produção imediatamente.
+    </p>
   </div>
 `;

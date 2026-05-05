@@ -61,6 +61,10 @@ const infoFaq = [
     a: 'Por + R$0,50 por unidade, imprimimos um texto na borda inferior antes do corte. Pode ser uma data (12.03.2024), nomes (Ana & João), uma palavra curta (saudade, forever) ou uma mensagem maior. Informe o texto ao enviar as fotos.'
   },
   {
+    q: 'Como funciona o desconto no Pix?',
+    a: 'Pagando via Pix, você tem 5% de desconto automático — é só avisar na hora de fechar o pedido pelo WhatsApp. Prefere parcelar? O crédito em 2× está disponível para pedidos a partir de R$100, com um pequeno acréscimo sobre o total que te informamos na hora.'
+  },
+  {
     q: 'Qual o prazo para ficar pronto?',
     a: 'Em geral, pedidos ficam prontos em até 2 dias úteis após a confirmação das fotos e do pagamento.'
   }

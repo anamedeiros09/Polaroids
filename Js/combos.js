@@ -1,5 +1,11 @@
 // ─── RENDER COMBOS ───────────────────────────────────────────
-const unitPrices = { postal: 4.00, oficial: 3.50, media: 3.00, pequena: 2.50, mini: 2.00 };
+const unitPrices = {
+  postal:  3.50,
+  oficial: 2.50,
+  media:   2.00,
+  pequena: 1.92,
+  mini:    1.78,
+};
 
 const combos = [
   // ── Âncora Oficial ──────────────────────────────────────────
@@ -7,6 +13,7 @@ const combos = [
     name: 'Oficial + Média',
     ideal: 'Álbuns de fotos, presentes clássicos',
     disc: 0.15,
+    finalPrice: 13.50,
     items: [
       { qty: 4, key: 'oficial', label: 'Oficial (8,6×10,8 cm)' },
       { qty: 2, key: 'media',   label: 'Média (6,5×7,9 cm)' }
@@ -17,6 +24,7 @@ const combos = [
     name: 'Oficial + Pequena',
     ideal: 'Mix de formatos, decoração de quadros',
     disc: 0.15,
+    finalPrice: 14.50,
     items: [
       { qty: 4, key: 'oficial',  label: 'Oficial (8,6×10,8 cm)' },
       { qty: 3, key: 'pequena',  label: 'Pequena (5,0×6,1 cm)' }
@@ -27,6 +35,7 @@ const combos = [
     name: 'Oficial + Mini',
     ideal: 'Coleções variadas, scrapbook criativo',
     disc: 0.10,
+    finalPrice: 16.50,
     items: [
       { qty: 4, key: 'oficial', label: 'Oficial (8,6×10,8 cm)' },
       { qty: 4, key: 'mini',    label: 'Mini (4,0×4,9 cm)' }
@@ -38,6 +47,7 @@ const combos = [
     name: 'Média + Pequena',
     ideal: 'Festas grandes, aniversários, eventos',
     disc: 0.15,
+    finalPrice: 21.50,
     items: [
       { qty: 6, key: 'media',   label: 'Média (6,5×7,9 cm)' },
       { qty: 6, key: 'pequena', label: 'Pequena (5,0×6,1 cm)' }
@@ -48,6 +58,7 @@ const combos = [
     name: 'Média + Mini',
     ideal: 'Lembrancinhas de festa, decoração de mesa',
     disc: 0.10,
+    finalPrice: 25.50,
     items: [
       { qty: 6, key: 'media', label: 'Média (6,5×7,9 cm)' },
       { qty: 8, key: 'mini',  label: 'Mini (4,0×4,9 cm)' }
@@ -59,6 +70,7 @@ const combos = [
     name: 'Pequena + Mini (12+4)',
     ideal: 'Kits de scrapbook, presentes criativos',
     disc: 0.10,
+    finalPrice: 27.50,
     items: [
       { qty: 12, key: 'pequena', label: 'Pequena (5,0×6,1 cm)' },
       { qty: 4,  key: 'mini',    label: 'Mini (4,0×4,9 cm)' }
@@ -69,6 +81,7 @@ const combos = [
     name: 'Pequena + Mini (9+7)',
     ideal: 'Varais decorativos, quarto temático',
     disc: 0.10,
+    finalPrice: 27.50,
     items: [
       { qty: 9, key: 'pequena', label: 'Pequena (5,0×6,1 cm)' },
       { qty: 7, key: 'mini',    label: 'Mini (4,0×4,9 cm)' }
@@ -80,6 +93,7 @@ const combos = [
     name: 'Mini + Pequena (10+8)',
     ideal: 'Coleções grandes, presentear em grupo',
     disc: 0.10,
+    finalPrice: 31.00,
     items: [
       { qty: 10, key: 'mini',    label: 'Mini (4,0×4,9 cm)' },
       { qty: 8,  key: 'pequena', label: 'Pequena (5,0×6,1 cm)' }
@@ -90,6 +104,7 @@ const combos = [
     name: 'Mini + Pequena (12+6)',
     ideal: 'Kits festa, mesa posta, enfeites',
     disc: 0.10,
+    finalPrice: 31.00,
     items: [
       { qty: 12, key: 'mini',    label: 'Mini (4,0×4,9 cm)' },
       { qty: 6,  key: 'pequena', label: 'Pequena (5,0×6,1 cm)' }
@@ -101,6 +116,7 @@ const combos = [
     name: 'Postal + Média',
     ideal: 'Presentes premium, álbuns de memória',
     disc: 0.10,
+    finalPrice: 12.50,
     items: [
       { qty: 2, key: 'postal', label: 'Postal (10,5×12,8 cm)' },
       { qty: 3, key: 'media',  label: 'Média (6,5×7,9 cm)' }
@@ -111,6 +127,7 @@ const combos = [
     name: 'Postal + Pequena',
     ideal: 'Kits de viagem, lembrança de eventos',
     disc: 0.08,
+    finalPrice: 14.50,
     items: [
       { qty: 2, key: 'postal',  label: 'Postal (10,5×12,8 cm)' },
       { qty: 4, key: 'pequena', label: 'Pequena (5,0×6,1 cm)' }
@@ -121,6 +138,7 @@ const combos = [
     name: 'Postal + Mini',
     ideal: 'Varal temático, decoração criativa',
     disc: 0.10,
+    finalPrice: 22.50,
     items: [
       { qty: 2,  key: 'postal', label: 'Postal (10,5×12,8 cm)' },
       { qty: 10, key: 'mini',   label: 'Mini (4,0×4,9 cm)' }
@@ -132,6 +150,7 @@ const combos = [
     name: 'Mix Total',
     ideal: 'Um de cada! Coleção completa e variada',
     disc: 0.08,
+    finalPrice: 24.50,
     items: [
       { qty: 1, key: 'postal',  label: 'Postal (10,5×12,8 cm)' },
       { qty: 1, key: 'oficial', label: 'Oficial (8,6×10,8 cm)' },
@@ -150,7 +169,7 @@ function fmtPrice(val) {
 const combosGrid = document.getElementById('combos-grid');
 combos.forEach(c => {
   const fullPrice = c.items.reduce((sum, it) => sum + it.qty * unitPrices[it.key], 0);
-  const discPrice = Math.round(fullPrice * (1 - c.disc) * 100) / 100;
+  const discPrice = Math.ceil(fullPrice * (1 - c.disc) * 2) / 2;
   const savingsAmt = (fullPrice - discPrice).toFixed(2).replace('.', ',');
   const discPct = Math.round(c.disc * 100);
 
@@ -171,8 +190,10 @@ combos.forEach(c => {
           <div>
             <div style="font-size:11px;color:var(--gray-light);text-decoration:line-through;margin-bottom:2px">${fmtPrice(fullPrice)}</div>
             <div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--brown)">${fmtPrice(discPrice)}</div>
+            <div style="font-size:11px;color:#2e7d32;margin-top:4px">🔑 5% OFF no Pix</div>
           </div>
           <div class="combo-savings-pill">${discPct}% · economia R$${savingsAmt}</div>
+          ${discPrice >= 100 ? '<div style="font-size:11px;color:#555;margin-top:6px">💳 2× com juros disponível</div>' : ''}
         </div>
       </div>
     </div>`;
