@@ -2,13 +2,8 @@
 const polaroids = [
   {
     id: 'oficial', emoji: '📷', name: 'Oficial', subtitle: 'Polaroid Original',
-<<<<<<< HEAD
     wMM: 88, hMM: 107, pWmm: 79, pHmm: 72, bLat: 4.5, bBot: 23, seed: 17, minQty: 2,
     usage: 'O formato clássico e mais reconhecido. Perfeito para mural de fotos, presentes e álbuns.',
-=======
-    wMM: 88, hMM: 107, pWmm: 79, pHmm: 72, bLat: 4.5, bBot: 23, seed: 17, minQty: 4,
-    usage: 'O formato clássico e mais reconhecido. Perfeito para album de fotos, presentes e murais de fotos. Cabe em qualquer moldura padrão.',
->>>>>>> 689fa2640c4d0cc09cdcf1a0e0fbc16fce804d64
     usageImgs: [
       { src: 'Img/6.png', label: 'Álbum de fotos' },
       { src: 'Img/7.png', label: 'Presente' },
@@ -27,13 +22,8 @@ const polaroids = [
   },
   {
     id: 'pequena', emoji: '💳', name: 'Pequena', subtitle: 'Para levar sempre consigo',
-<<<<<<< HEAD
     wMM: 50, hMM: 61, pWmm: 44, pHmm: 40, bLat: 3, bBot: 13, seed: 63, minQty: 6,
     usage: 'Cabe em qualquer agenda ou varal de fotos. Ótimo para lembrancinhas de aniversário, festas e souvenirs.',
-=======
-    wMM: 50, hMM: 61, pWmm: 44, pHmm: 40, bLat: 3, bBot: 13, seed: 63, minQty: 12,
-    usage: 'Cabe em qualquer agenda ou caderno pequeno. Ótimo para lembrancinhas de aniversário, festas e souvenirs. Famosa em varais de fotos',
->>>>>>> 689fa2640c4d0cc09cdcf1a0e0fbc16fce804d64
     usageImgs: [
       { src: 'Img/12.png', label: 'Agenda' },
       { src: 'Img/13.png', label: 'Varal de fotos' },
@@ -42,13 +32,8 @@ const polaroids = [
   },
   {
     id: 'mini', emoji: '🎨', name: 'Mini Decorativa', subtitle: 'Delicada e charmosa',
-<<<<<<< HEAD
     wMM: 40, hMM: 49, pWmm: 35, pHmm: 31, bLat: 2.5, bBot: 10, seed: 85, minQty: 10,
     usage: 'Perfeita para marca-páginas, scrapbooks, enfeites de mesa e carregar na carteira. Alta quantidade por folha reduz o custo.',
-=======
-    wMM: 40, hMM: 49, pWmm: 35, pHmm: 31, bLat: 2.5, bBot: 10, seed: 85, minQty: 20,
-    usage: 'Perfeita para marca-páginas, scrapbooks, enfeites de mesa e composições de parede. Cabe em qualquer carteira. Alta quantidade por folha reduz o custo.',
->>>>>>> 689fa2640c4d0cc09cdcf1a0e0fbc16fce804d64
     usageImgs: [
       { src: 'Img/15.png', label: 'Scrapbook' },
       { src: 'Img/16.png', label: 'Marca-página' },
@@ -57,11 +42,7 @@ const polaroids = [
   },
   {
     id: 'postal', emoji: '📬', name: 'Postal', subtitle: 'Grande e impactante',
-<<<<<<< HEAD
     wMM: 105, hMM: 128, pWmm: 94, pHmm: 86, bLat: 5.5, bBot: 28, seed: 110, minQty: 1,
-=======
-    wMM: 105, hMM: 128, pWmm: 94, pHmm: 86, bLat: 5.5, bBot: 28, seed: 110, minQty: 2,
->>>>>>> 689fa2640c4d0cc09cdcf1a0e0fbc16fce804d64
     usage: 'O maior formato. Ideal para presentes premium, porta-retrato e decoração de ambientes. Impacto visual garantido.',
     usageImgs: [
       { src: 'Img/18.png', label: 'Porta-retrato' },
